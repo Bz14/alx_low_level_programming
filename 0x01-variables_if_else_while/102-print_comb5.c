@@ -6,9 +6,10 @@
  */
 int main(void)
 {
-int i = 0, j = 0;
+int j = 0, i = 0;
 while (i <= 99)
 {
+j = i;
 while (j <= 99)
 {
 if (i < j)
