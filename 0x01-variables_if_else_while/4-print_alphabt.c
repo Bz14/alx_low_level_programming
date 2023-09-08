@@ -10,9 +10,13 @@ char lower = 'a';
 while (lower <= 'z')
 {
 if (lower == 'q' || lower == 'e')
+{
 continue;
+}
 else
+{   
 putchar(lower);
+}
 lower++;
 }
 putchar('\n');
