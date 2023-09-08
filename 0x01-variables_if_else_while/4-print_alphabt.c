@@ -15,7 +15,7 @@ lower++;
 continue;
 }
 else
-{   
+{
 putchar(lower);
 lower++;
 }
