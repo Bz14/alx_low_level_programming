@@ -8,10 +8,11 @@
  */
 int main(void)
 {
-int n;
+int n, rem;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-printf("Last digit of %d is ", n);
+rem = n % 10;
+printf("Last digit of %d is %d ", n, rem);
 if (n % 10 > 5)
 printf("and is grater than 5\n");
 else if (n % 10 == 0)
