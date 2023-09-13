@@ -5,13 +5,13 @@
  */
 void times_table(void)
 {
-	int i, j;
+	int i, j, prod;
 
 	for (i = 0; i <= 9; ++i)
 	{
-		for (j = 0; j <= 9; ++i)
+		for (j = 0; j <= 9; ++j)
 		{
-			int prod = i * j;
+			prod = i * j;
 
 			if (prod > 9)
 			{
