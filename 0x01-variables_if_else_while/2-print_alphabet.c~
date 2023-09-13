@@ -1,0 +1,11 @@
+#include<stdio.h>
+/**
+ * main - Empty Point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+  putchar('h');
+  return (0);
+}
