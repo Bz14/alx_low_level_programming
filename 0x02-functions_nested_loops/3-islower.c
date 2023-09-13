@@ -2,7 +2,7 @@
 /**
  * _islower - check whether lowercase or not.
  *
- * @parameterc : a single character
+ * @c: a single character
  *
  * Return: Always return 1 or 0
  */
