@@ -15,7 +15,7 @@ int main(void)
   for (count = 0; count < 92; count++)
     {
       num = a + b;
-      printf("%lu", num);
+      printf("%lu, ", num);
       a = b;
       b = num;
     }
