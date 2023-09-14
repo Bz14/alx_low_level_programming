@@ -8,16 +8,16 @@ int main(void)
 {
 	int a = 1;
 	int b = 2;
-	int num = a + b;
+	int num;
 	int count = 0;
 
-	printf("%d, %d,  ", a, b);
+	printf("%d, %d, ", a, b);
 	while (count <= 98)
 	{
+		num = a + b;
 		printf("%d", num);
 		a = b;
 		b = num;
-		num = a + b;
 		if (count != 98)
 		{
 			printf(", ");
