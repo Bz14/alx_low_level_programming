@@ -18,7 +18,7 @@ int main(void)
 		printf("%ld", num);
 		a = b;
 		b = num;
-		if (count != 50)
+		if (count != 49)
 		{
 			printf(", ");
 		}
