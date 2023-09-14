@@ -39,6 +39,6 @@ int main(void)
       b_half1 = firsthalf;
       b_half2 = secondhalf;
     }
-  printf('\n');
+  putchar('\n');
   return (0);
 }
