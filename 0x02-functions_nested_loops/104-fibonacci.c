@@ -26,7 +26,7 @@ int main(void)
   for (count = 93; count < 99; count++)
     {
       firsthalf = a_half1 + b_half1;
-      secondhalf = a_half1 + b_half2;
+      secondhalf = a_half2 + b_half2;
       if (a_half2 + b_half2 > 9999999999)
 	{ firsthalf += 1;
 	  secondhalf %= 10000000000;
