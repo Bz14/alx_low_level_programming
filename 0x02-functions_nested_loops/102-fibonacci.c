@@ -11,11 +11,11 @@ int main(void)
 	long num;
 	int count = 2;
 
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 	while (count <= 50)
 	{
 		num = a + b;
-		printf("%d", num);
+		printf("%ld", num);
 		a = b;
 		b = num;
 		if (count != 50)
