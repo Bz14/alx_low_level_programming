@@ -29,7 +29,7 @@ void print_times_table(int n)
 		  _putchar((((i * j) / 10) % 10) + 48);
 		  _putchar(((i * j) % 10) + 48);
 		}
-	      if ((i * (j + 1) > 10) && j != n)
+	      if (((i * (j + 1) > 10) && (i * (j + 1) < 100)) && j != n)
 		{
 		  _putchar(',');
 		  _putchar(' ');
