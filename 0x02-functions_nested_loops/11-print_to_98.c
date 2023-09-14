@@ -14,7 +14,7 @@ void print_to_98(int n)
 	{
 		for (i = n; i >= 98; ++i)
 		{
-			if (n > 9)
+			if (i > 9)
 			{
 				_putchar((i / 10) + 48);
 				_putchar((i % 10) + 48);
