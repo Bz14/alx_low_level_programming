@@ -1,15 +1,14 @@
 #include <stdio.h>
 /**
- *
- * main - Entry point
+ * main - Entry Point
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int num;
+	long a = 1;
+	long b = 2;
+	long num;
 	int count = 2;
 
 	printf("%d, %d, ", a, b);
