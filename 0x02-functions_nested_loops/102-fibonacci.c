@@ -12,7 +12,7 @@ int main(void)
 	int count = 2;
 
 	printf("%ld, %ld, ", a, b);
-	while (count <= 50)
+	while (count < 50)
 	{
 		num = a + b;
 		printf("%ld", num);
@@ -24,5 +24,6 @@ int main(void)
 		}
 		count++;
 	}
+	putchar('\n');
 	return (0);
 }
