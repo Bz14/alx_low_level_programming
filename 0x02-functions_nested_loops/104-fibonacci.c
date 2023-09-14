@@ -9,7 +9,7 @@ int main(void)
 	int a = 1;
 	int b = 2;
 	int num;
-	int count = 0;
+	int count = 2;
 
 	printf("%d, %d, ", a, b);
 	while (count <= 98)
