@@ -22,5 +22,6 @@ char *leet(char *n)
 		else if (*(n + i) == 'l' || *(n + i) == 'L')
 			*(n + i) = 1 + 48;
 	}
+	*(n + i) = '\0';
 	return (n);
 }
