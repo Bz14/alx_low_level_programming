@@ -14,11 +14,11 @@ char *cap_string(char *n)
 
 	for (i = 0; i < len; ++i)
 	{
-		for (j = 0; j < sep_len; ++j)
+	  for (j = 0; j < sep_len && *(n + i) != '\0'; ++j)
 		{
-			if (*(n + i) == s[j] || *(n + i) == ' ')
+		  if (*(n + i) == s[j] || *(n + i) == ' ')
 			{
-				*(n + (i + 1)) = toupper(*(n + (i + 1)));
+			  *(n + i) = toupper(*(n + i));
 				break;
 			}
 		}
