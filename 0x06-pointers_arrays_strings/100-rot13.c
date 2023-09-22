@@ -19,5 +19,6 @@ char *rot13(char *n)
 				*(n + i) = enc_2[j];
 				break;
 			}
+	*(n + i) = '\0';
 	return (n);
 }
