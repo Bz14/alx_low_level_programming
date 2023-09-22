@@ -18,6 +18,8 @@ char *cap_string(char *n)
 		{
 			if (*(n + i) == s[j] || *(n + i) == ' ')
 			{
+				if (s[j] == '\t')
+					*(n + i) = ' ';
 				*(n + (i + 1)) = toupper(*(n + (i + 1)));
 				break;
 			}
