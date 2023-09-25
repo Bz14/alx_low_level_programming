@@ -14,12 +14,18 @@ char *rot13(char *n)
 
 	for (i = 0; i < len && *n != '\0'; ++i)
 	{
-		for (j = 0; j < 26; j++)
+		if (!isdigit(n[i]))
 		{
-			if (*(n + i) == enc_1[j] || *(n + i) == toupper(enc_1[j]))
+			for (j = 0; j < 26; j++)
 			{
-				*(n + i) = enc_2[j];
-				break;
+				if (n[i] == enc_1[j] || n[i] == toupper(enc_1[j]))
+				{
+					if (isupper(n[i]))
+						n[i] = toupper(enc_2[j]);
+					else
+						n[i] = enc_2[j];
+					break;
+				}
 			}
 		}
 	}
