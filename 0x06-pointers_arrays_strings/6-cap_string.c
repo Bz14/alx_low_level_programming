@@ -28,7 +28,7 @@ char *cap_string(char *n)
 		    *(n + i) == '{' ||
 		    *(n + i) == '}' ||
 		    i == 0)
-			*(n + i) -= 32;
+			*(n + i) += 32;
 		i++;
 	}
 	return (n);
