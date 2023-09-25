@@ -8,20 +8,28 @@
  */
 char *cap_string(char *n)
 {
-	int i, j, len = strlen(n);
-	char s[] = {'\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
-	int sep_len = strlen(s);
+	int i = 0;
 
-	for (i = 0; i < len; ++i)
+	while (n[i])
 	{
-	  for (j = 0; j < sep_len && *(n + i) != '\0'; ++j)
-		{
-		  if (*(n + i) == s[j] || *(n + i) == ' ')
-			{
-			  *(n + i) = toupper(*(n + i));
-				break;
-			}
-		}
+		while (!(*(n + i) >= 'a' && *(n + i) <= 'z'))
+			i++;
+		if (*(n + i) == ' ' ||
+		    *(n + i) == '\t' ||
+		    *(n + i) == '\n' ||
+		    *(n + i) == ',' ||
+		    *(n + i) == ';' ||
+		    *(n + i) == '.' ||
+		    *(n + i) == '!' ||
+		    *(n + i) == '?' ||
+		    *(n + i) == '"' ||
+		    *(n + i) == '(' ||
+		    *(n + i) == ')' ||
+		    *(n + i) == '{' ||
+		    *(n + i) == '}' ||
+		    i == 0)
+			*(n + i) -= 32;
+		i++;
 	}
 	return (n);
 }
