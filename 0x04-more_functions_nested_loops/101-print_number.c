@@ -5,31 +5,16 @@
  */
 void print_number(int n)
 {
-	if (n >= 0 && n <= 9)
-		_putchar(n + 48);
-	else if (n >= 10 && n <= 99)
+	unsigned int a;
+
+	if (n < 0)
 	{
-		_putchar((n / 10) + 48);
-		_putchar((n % 10) + 48);
-	}
-	else if (n >= 100 && n <= 999)
-	{
-		_putchar((n / 100) + 48);
-		_putchar(((n / 10) % 10) + 48);
-		_putchar(n % 10);
-	}
-	else if (n >= 1000 && n <= 9999)
-	{
-		_putchar((n / 1000) + 48);
-		_putchar(((n / 100) % 10) + 48);
-		_putchar(((n / 10) % 10) + 48);
-		_putchar((n % 10) + 48);
-	}
-	else if (n < 0)
-	{
-		n = -n;
 		_putchar('-');
-		_putchar((n / 10) + 48);
-		_putchar((n % 10) + 48);
+		a = -n;
 	}
+	else
+		a = n;
+	if (a / 10)
+		print_number(a / 10);
+	_putchar ((a % 10) + 48);
 }
