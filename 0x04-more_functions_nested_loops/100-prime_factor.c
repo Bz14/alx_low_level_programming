@@ -3,7 +3,7 @@
  * main - largest prime factor
  * Return: Always Success(0)
  */
-int main()
+int main(void)
 {
 	unsigned long factor = 2, num = 612852475143UL;
 
@@ -15,5 +15,5 @@ int main()
 			factor++;
 	}
 	printf("%lu\n", num);
-	return 0;
-}    
+	return (0);
+}
