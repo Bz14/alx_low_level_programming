@@ -12,18 +12,18 @@ char *rot13(char *n)
 	char enc_1[] = "abcdefghijklmnopqrstuvwxyz";
 	char enc_2[] = "nopqrstuvwxyzabcdefghijklm";
 
-	for (i = 0; i < len && *n != '\0'; ++i)
+	for (i = 0; i < len; ++i)
 	{
-		if (!isdigit(n[i]))
+		if (isalpha(*(n + i)))
 		{
 			for (j = 0; j < 26; j++)
 			{
-				if (n[i] == enc_1[j] || n[i] == toupper(enc_1[j]))
+				if (*(n + i) == enc_1[j] || *(n + i) == toupper(enc_1[j]))
 				{
-					if (isupper(n[i]))
-						n[i] = toupper(enc_2[j]);
+					if (isupper(*(n + i)))
+						*(n + i) = toupper(enc_2[j]);
 					else
-						n[i] = enc_2[j];
+						*(n + i) = enc_2[j];
 					break;
 				}
 			}
