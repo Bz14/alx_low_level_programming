@@ -8,12 +8,10 @@
  */
 char *cap_string(char *n)
 {
-	int i = 0;
+	int i = 0, len = strlen(n);
 
-	while (n[i])
+	for (; i < len; i++)
 	{
-		while (!(*(n + i) >= 'a' && *(n + i) <= 'z'))
-			i++;
 		if (*(n + i) == ' ' ||
 		    *(n + i) == '\t' ||
 		    *(n + i) == '\n' ||
@@ -26,10 +24,11 @@ char *cap_string(char *n)
 		    *(n + i) == '(' ||
 		    *(n + i) == ')' ||
 		    *(n + i) == '{' ||
-		    *(n + i) == '}' ||
-		    i == 0)
-			*(n + i) += 32;
-		i++;
+		    *(n + i) == '}')
+			if (*(n + (i + 1)) >= 'A' && *(n + (i + 1)) <= 'z')
+				*(n + (i + 1)) = toupper(*(n + (i + 1)));
+		if (i == 0)
+			*(n + i) = toupper(*(n + i));
 	}
 	return (n);
 }
