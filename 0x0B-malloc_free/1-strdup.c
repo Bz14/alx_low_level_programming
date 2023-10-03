@@ -20,6 +20,6 @@ char *_strdup(char *str)
 		st[i] = *(str + i);
 		i++;
 	}
-	s[i] = '\0';
+	st[i] = '\0';
 	return (st);
 }
