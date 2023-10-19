@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  * add_node - add node at the begining
- * @head:  list od nodes
+ * @head:  list of nodes
  * @str:  a string
  * Return: the address of the new element
  */
@@ -17,7 +17,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (ptr == NULL)
 		return (NULL);
 	ptr->str =  strdup(str);
-	if (str == NULL)
+	if (ptr->str == NULL)
 	{
 		free(ptr);
 		return (NULL);
