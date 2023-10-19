@@ -2,16 +2,16 @@
 /**
  * print_string - prints a string
  */
-void print_string()
+void print_string(void)
 {
-	printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,");
+	printf("\nI bore my house upon my back!\n");
 }
 /**
- * main - entry point
- * Return: Always success(0)
+ * pre_main -execute before main
  */
-int main(void)
+void __attribute__((constructor)) pre_main()
 {
 	print_string();
-	return(0);
 }
+
