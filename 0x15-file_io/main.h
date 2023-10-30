@@ -1,5 +1,6 @@
 #ifndef FILE_IO
 #define FILE_IO
+#define BUFFER_SIZE 1024
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
